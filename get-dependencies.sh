@@ -23,7 +23,7 @@ case "$ARCH" in # they use X64 and ARM64 for the zip links
 esac
 TAG=$(wget -qO- "https://gitlab.com/api/v4/projects/sonicdcer%2FExtremeGRecomp/releases?per_page=1" \
       | sed 's/[()",{} ]/\n/g' | grep -A2 '^tag_name$' | tail -n1)
-ZIP_LINK="https://gitlab.com/api/v4/projects/sonicdcer%2FExtremeGRecomp/packages/generic/mariokart64recompiled$(echo "${zip_arch%-Release}" | tr -d '-' | tr '[:upper:]' '[:lower:]')/${TAG#v}/MarioKart64Recompiled-${TAG}-${zip_arch}.zip"
+ZIP_LINK="https://gitlab.com/api/v4/projects/sonicdcer%2FExtremeGRecomp/packages/generic/extremegrecompiled$(echo "${zip_arch%-Release}" | tr -d '-' | tr '[:upper:]' '[:lower:]')/${TAG#v}/ExtremeGRecompiled-${TAG}-${zip_arch}.zip"
 echo "${TAG#v}" > ~/version
 wget --retry-connrefused --tries=30 "$ZIP_LINK" -O /tmp/app.zip
 
