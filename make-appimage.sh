@@ -10,8 +10,6 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=https://gitlab.com/sonicdcer/ExtremeGRecomp/-/raw/main/icons/512.png?ref_type=heads
 export DESKTOP=https://gitlab.com/sonicdcer/ExtremeGRecomp/-/raw/main/.github/linux/ExtremeGRecompiled.desktop?ref_type=heads
 export STARTUPWMCLASS=ExtremeGRecompiled
-export DEPLOY_GTK=1
-export GTK_DIR=gtk-3.0
 export DEPLOY_VULKAN=1
 
 # Deploy dependencies
